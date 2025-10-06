@@ -1,0 +1,189 @@
+---
+title: "Using and extending data standards in wildlife disease ecology"
+format: revealjs
+editor: visual
+---
+
+## Introductions
+
+Instructor: Collin Schwantes - Currently Data librarian for the Viral Emergence Institute housed at Yale University - Formerly Data Librarian for Ecohealth Alliance, Data Scientist at Accenture Federal Services, Biosurveillance scientist at The National Biosurveillance Integration Center, Community Ecologist.
+
+::: notes
+Good morning everyone, I'm Collin Schwantes, the data librarian at the Viral Emergence Institute, also known as Verena.
+
+Today I'm going to be talking about using and extending a wildlife disease data standard my colleagues and I have developed over the past several years.
+:::
+
+## Observations about data in disease ecology.
+
+1.  Ecological data is complicated, expensive, and time consuming to produce
+2.  Ecologists love to ask if a finding is system or scale specific
+3.  Publishing papers \> sharing data
+4.  We love to reuse data
+5.  No dedicated standard or repository for disease ecology data
+
+::: notes
+I've been working in community ecology in some capacity since 2008 and in One Health and disease ecology since 2016.
+
+Over those decades I've started to see some patterns emerge. 1. Ecological data is complicated, expensive, and time consuming to produce 2. We love to ask if a finding is system or scale specific 3. Publishing papers is more valued than publishing data 4. We love to reuse data 5. No dedicated standard or repository commonly used
+
+The lack of repositories and data standards becomes abundantly clear when writing data management and sharing plans - something I do often as a data librarian.
+
+But the lack of standard reporting mechanisms is not confined to academic research pursuits. As a biosurveillance scientist my role was to develop a holistic view of infectious disease events that could cause problems in human, animal, or plant health. In that role I saw that there are as many ways to report surveillance data as their are infectious agents and monitoring agencies.
+:::
+
+## Why do we need a data standard?
+
+Easier to curate data. Data standards let us take small data and make it big. Big data allow us to parse specifics of scale and system, and ask novel questions.
+
+## How does using a data standard benefit me?
+
+1.  It makes it easier to document your data
+2.  It makes it easier to interpret your data
+3.  It makes it easier to share your data, which is likely a funder requirement
+4.  Makes it easier to access your data
+
+::: notes
+Beyond altruistic warm and fuzzies we all get from sharing our data and advancing the field, using a data standard to validate and share data has many direct benefits to you as a researcher.
+
+The person most likely to reuse your data is you. So having well documneted, interpretatble data that you can cite and readily access will push your research along faster.
+:::
+
+## GBIF: a case study in using data standards
+
+The Global Biodiversity Information Facility (GBIF)
+
+![https://www.gbif.org/what-is-gbif](https://api.gbif.org/v1/image/unsafe/1170x422/http:%2F%2Fimages.ctfassets.net%2Fuo17ejk9rkwj%2F1EeiBedMvkEW1rekNmDLQh%2F2b5234346a9c42395658ba59dd1f8f94%2Fgbif-bg.png)
+
+::: notes
+GBIF is a great of example of what happens when a community coaleses around a data standard.
+
+The Global Biodiversity Information Facility - GBIF - has revolutionized the study of biodiversity by making massive amounts of occurrence data available to researchers in a standard form.\
+This allows researchers to ask novel questions, identify under studied areas, and build and test new theories.
+:::
+
+## How did GBIF get all this data?
+
+![GBIF is a data aggregator](https://data-blog.gbif.org/post/2020-10-09-issues-and-flags_files/workflow1.png)
+
+::: notes
+At its core GBIF is a data aggregator.\
+Through its governing body, it manages the DarwinCore data standard.\
+Research groups publish their data in the DarwinCore standard, gbif gobbles up the data, and gbif provides standard methods for accessing the data.
+
+By asking publishers to conform to the data standard, you can have thousands of research groups who study particular organisms in a particular systems contributing to the creation of a massive, coherent, data set.
+:::
+
+## How do we build a GBIF for wildlife disease data?
+
+::::: columns
+::: {.column width="50%"}
+![Viral Emergence Institute](https://raw.githubusercontent.com/viralemergence/.github/main/profile/Verena%20Icon_Light%20Blue.png)
+:::
+
+::: {.column width="50%"}
+-   We start with a community of practitioners ✅
+-   That community builds a data standard ✅
+-   That data standard is useful and acquires broader adoption
+:::
+:::::
+
+::: notes
+The Viral emergence Institute- NSF funded BII with members studying everything from biography to bat immunology
+
+The standard we built is called the wildlife disease data standard.
+
+Within VERENA, we've found WDDS to be useful, and now want to increase its use by sharing it with the broader community.
+:::
+
+## What is a data standard?
+
+Data standards refer to methods of organizing, documenting, and formatting data in order to aid in data aggregation, sharing and reuse.\
+\
+— [Network of the National Library of Medicine](https://www.nnlm.gov/guides/data-glossary/data-standards)
+
+::: notes
+So lets take a step back and give a more formal definition of a data standard.
+
+Data standards tell us how data can be put together, what metadata are required, and what file formats we can use. They come in a myriad flavors and range from extremely rigid to highly flexible and from technically challenging to user friendly.
+:::
+
+## What is the Wildlife Disease Data Standard?
+
+-   Minimal data standard for describing interactions between a host and a parasite
+
+-   Developed over years with input from biologists across a range of specialists
+
+-   Encourages the reporting of negative data and positive data
+
+-   Focus on utility and ease of use
+
+::: notes
+Our goal with the wildlife disease data standard is to describe interactions between hosts and parasites with sufficient detail and structure as to be useful, but not burdensome on the end user.
+
+In this case a parasite can be anything from a microparasite like a virus to a macroparasite like a tick. We use this broad term because systems are complicated and a researcher may want to monitor interactions at multiple levels.
+:::
+
+
+## Data standard Components
+
+::::: columns
+::: {.column width="50%"}
+### Disease Data
+- Describes host-parasite interaction
+- Allows for interpretation and aggregation 
+:::
+
+::: {.column width="50%"}
+### Project Metadata
+- Describes how the data were produced and by whom
+- Increases discoverability
+- Makes attribution and rights/licensing clear
+:::
+:::::
+
+
+::: notes
+The standard has two components disease data and project metadata
+
+The disease data component describes the contents and structure of data related to the detection (or not) of a parasite in/on a given host
+
+The project metadata component describes the contents and structure of data related to the creation of the disease data component.
+
+The disease data component allows us to create a collection of datasets that can be re-used, aggregated, and shared, while the project metadata component provides context for the data, makes it easier to find the dataset, and gives clear information about attribution and use
+:::
+
+
+
+## When Should I use WDDS?
+
+-   When you are collecting data about host-parasite interactions
+-   Simple or complex study designs (e.g. pooled or nested sampling)
+-   Surveillance, archival, or research studies that focus on host-parasite interactions in wildlife
+
+::: notes
+WDDS can be applied to number of systems and study designs including
+:::
+
+## A more technial description
+
+-   json schema
+
+-   extensible and flexible
+
+-   Reuses terms from Datacite and DarwinCore
+
+::: notes
+The wdds data standard is implemented using a json schema. So we define all terms and relationships in a specially formatted JSON file and use a json schema validation engine to check if our data meet the standard.
+
+WDDS is flexible and extensible. This means that you may add fields to the data standard and potentially even modify them, while still being in compliance with the data standard.
+
+WDDS relies heavily on Datacite for project metadata terms and DarwinCore for disease data terms related to sampling events and occurrence data. This makes it easier to convert WDDS data into other formats or even connect it to other systems in the future.
+:::
+
+## How do I work with wdds?
+
+-   Use the [wddsWizard](https://viralemergence.github.io/wddsWizard/index.html) R package!
+-   `remotes::install_github("viralemergence/wddsWizard")`
+
+## Hands on activities!
