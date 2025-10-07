@@ -1,15 +1,8 @@
-### package from R universe
 
-install.packages('wddsWizard', repos = c('https://viralemergence.r-universe.dev',
-                                         'https://cloud.r-project.org'))
-# or
-# remotes::install_github("viralemergence/wddsWizard")
 
 # renv::restore()
 
-library(dplyr)
-library(jsonvalidate)
-library(fs)
+source("packages.R")
 
 ## The Whole game ----
 
@@ -78,8 +71,8 @@ list_filter <- my_disease_data_prepped |>
 
 my_disease_data_prepped_cleaned <- my_disease_data_prepped[!list_filter]
 
-## why is this filtering approach potentially problematic? are there any steps
-## we should repeat?
+## why is this filtering approach potentially problematic? 
+## are there any steps we should repeat?
 
 ## convert to JSON
 my_disease_data_json <- my_disease_data_prepped_cleaned |>
@@ -106,6 +99,14 @@ if (!dd_validation) {
 } else {
   print("Valid disease data!😁")
 }
+
+## What did we learn?
+# - how prepare host-parasite interaction data for validation
+# - how to look at the components of the json schema from within R
+# - how to validate data
+
+## Next up - project metadata. Open the tutorials/project_metadata.R script
+
 
 
 
