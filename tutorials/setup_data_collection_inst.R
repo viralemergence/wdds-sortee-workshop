@@ -151,4 +151,5 @@ if (!dd_validation) {
 #   "required":["disease_data","project_metadata"]
 # }
 
+## What if you already have data?
 
