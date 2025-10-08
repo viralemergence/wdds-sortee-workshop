@@ -124,24 +124,24 @@ Our goal with the wildlife disease data standard is to describe interactions bet
 In this case a parasite can be anything from a microparasite like a virus to a macroparasite like a tick. We use this broad term because systems are complicated and a researcher may want to monitor interactions at multiple levels.
 :::
 
-
 ## Data standard Components
 
 ::::: columns
 ::: {.column width="50%"}
 ### Disease Data
-- Describes host-parasite interaction
-- Allows for interpretation and aggregation 
+
+-   Describes host-parasite interaction
+-   Allows for interpretation and aggregation
 :::
 
 ::: {.column width="50%"}
 ### Project Metadata
-- Describes how the data were produced and by whom
-- Increases discoverability
-- Makes attribution and rights/licensing clear
+
+-   Describes how the data were produced and by whom
+-   Increases discoverability
+-   Makes attribution and rights/licensing clear
 :::
 :::::
-
 
 ::: notes
 The standard has two components disease data and project metadata
@@ -152,8 +152,6 @@ The project metadata component describes the contents and structure of data rela
 
 The disease data component allows us to create a collection of datasets that can be re-used, aggregated, and shared, while the project metadata component provides context for the data, makes it easier to find the dataset, and gives clear information about attribution and use
 :::
-
-
 
 ## When Should I use WDDS?
 
@@ -187,3 +185,11 @@ WDDS relies heavily on Datacite for project metadata terms and DarwinCore for di
 -   `remotes::install_github("viralemergence/wddsWizard")`
 
 ## Hands on activities!
+
+-   Getting started
+
+-   Project metadata
+
+-   Setting up a collection instrument
+
+-   Translating existing data to WDDS
